@@ -33,9 +33,9 @@ Route::get('/part_channel', [App\Http\Controllers\HomeController::class, 'part']
 
 
 Route::get('/start_bot', function() {
-    system('supervisorctl start honeybot_bot');
+    system('/sbin/start_bot');
 });
 
 Route::get('/stop_bot', function() {
-    system('supervisorctl stop honeybot_bot');
+    system('/sbin/stop_bot');
 });
