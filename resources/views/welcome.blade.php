@@ -43,7 +43,7 @@
                 </div>
             @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto my-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-center sm:pt-0">
                     <h1 style="color: white;">Bot Heroes 3</h1>
                 </div>
