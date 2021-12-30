@@ -107,8 +107,8 @@ class HomeController extends Controller
 
 
     private function _restartBot($seconds) {
-        system('supervisorctl stop honeybot_bot');
+        system('/sbin/stop_bot');
         sleep($seconds);
-        system('supervisorctl start honeybot_bot');
+        system('/sbin/start_bot');
     }
 }
