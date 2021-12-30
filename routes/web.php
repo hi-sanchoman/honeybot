@@ -33,9 +33,9 @@ Route::get('/part_channel', [App\Http\Controllers\HomeController::class, 'part']
 
 
 Route::get('/start_bot', function() {
-    system('/sbin/start_bot');
+    system('sudo /sbin/start_bot');
 });
 
 Route::get('/stop_bot', function() {
-    system('/sbin/stop_bot');
+    system('sudo /sbin/stop_bot');
 });

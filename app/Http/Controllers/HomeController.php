@@ -107,8 +107,8 @@ class HomeController extends Controller
 
 
     private function _restartBot($seconds) {
-        system('/sbin/stop_bot');
+        system('sudo /sbin/stop_bot');
         sleep($seconds);
-        system('/sbin/start_bot');
+        system('sudo /sbin/start_bot');
     }
 }
