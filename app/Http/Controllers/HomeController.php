@@ -47,7 +47,7 @@ class HomeController extends Controller
         $twitchUser = Socialite::driver('twitch')->stateless()->user();
         // dd($twitchUser);
 
-        $user = User::where('nickname', $twitchUser->nickname)->first();
+        $user = User::where('email', $twitchUser->email)->first();
 
         if (!$user) {
             $user = User::create([
@@ -57,6 +57,7 @@ class HomeController extends Controller
                 'password' => md5($twitchUser->nickname),
             ]);
         } else {
+            $user->name = $twitchUser->name;
             $user->nickname = $twitchUser->nickname;
             $user->save();
         }
