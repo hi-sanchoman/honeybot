@@ -29,3 +29,13 @@ Route::get('/twitch_auth', [App\Http\Controllers\HomeController::class, 'twitchA
 
 Route::get('/join_channel', [App\Http\Controllers\HomeController::class, 'join']);
 Route::get('/part_channel', [App\Http\Controllers\HomeController::class, 'part']);
+
+
+
+Route::get('/start_bot', function() {
+    system('supervisorctl start honeybot_bot');
+});
+
+Route::get('/stop_bot', function() {
+    system('supervisorctl stop honeybot_bot');
+});
